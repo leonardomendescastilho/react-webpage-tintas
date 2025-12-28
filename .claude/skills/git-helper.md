@@ -32,22 +32,23 @@ Execute os comandos:
 
 ### Passo 3: Apresente ao usuário
 
-SEMPRE apresente neste formato exato, com comandos prontos para copiar:
+SEMPRE apresente neste formato exato, com comandos prontos para copiar.
+IMPORTANTE: O corpo do PR deve SEMPRE estar dentro de um bloco de código markdown para facilitar cópia.
 
-```
 ## 🌿 Branch
 
-git checkout -b <tipo>/<nome-descritivo>
+`git checkout -b <tipo>/<nome-descritivo>`
 
 ## 📝 Commit
 
-git add -A && git commit -m "<tipo>(<escopo>): <descrição>"
+`git add -A && git commit -m "<tipo>(<escopo>): <descrição>"`
 
 ## 📋 PR
 
-**Título:** <tipo>(<escopo>): <descrição>
+**Título:** `<tipo>(<escopo>): <descrição>`
 
-**Corpo:**
+**Corpo:** (em bloco markdown para copiar)
+~~~markdown
 ## Descrição
 <breve descrição>
 
@@ -58,24 +59,24 @@ git add -A && git commit -m "<tipo>(<escopo>): <descrição>"
 ## Como Testar
 1. <passo 1>
 2. <passo 2>
-```
+~~~
 
 ## Exemplo de saída
 
-```
 ## 🌿 Branch
 
-git checkout -b feat/user-authentication
+`git checkout -b feat/user-authentication`
 
 ## 📝 Commit
 
-git add -A && git commit -m "feat(auth): adiciona sistema de login com validação"
+`git add -A && git commit -m "feat(auth): adiciona sistema de login com validação"`
 
 ## 📋 PR
 
-**Título:** feat(auth): adiciona sistema de login
+**Título:** `feat(auth): adiciona sistema de login`
 
 **Corpo:**
+~~~markdown
 ## Descrição
 Implementa autenticação de usuários com validação de credenciais.
 
@@ -88,4 +89,4 @@ Implementa autenticação de usuários com validação de credenciais.
 1. Executar `npm run dev`
 2. Acessar /login
 3. Testar com credenciais válidas e inválidas
-```
+~~~

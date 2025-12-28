@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import { FaArrowRight } from "react-icons/fa6"
+import { FaArrowRight, FaHouse, FaBuilding, FaPaintRoller, FaWrench } from "react-icons/fa6"
 import { siteConfig } from "@/data/site-config"
 import { cn } from "@/lib/utils"
 import { staggerContainer, fadeUp, viewport } from "@/lib/motion"
@@ -8,6 +8,14 @@ interface ServicesSectionProps {
   id?: string
   className?: string
 }
+
+// Ícones para cada serviço
+const serviceIcons = [
+  FaHouse,        // Pintura Residencial
+  FaBuilding,     // Pintura Comercial
+  FaPaintRoller,  // Texturas Especiais
+  FaWrench,       // Restauração
+]
 
 export const ServicesSection = ({ id = "servicos", className }: ServicesSectionProps) => {
   const { textos, servicos } = siteConfig
@@ -66,30 +74,35 @@ export const ServicesSection = ({ id = "servicos", className }: ServicesSectionP
             whileInView="visible"
             viewport={viewport}
           >
-            {servicos.map((servico) => (
-              <motion.article
-                key={servico.titulo}
-                variants={fadeUp}
-                className="group p-6 md:p-8 rounded-2xl border border-border bg-background transition-colors duration-300 hover:bg-muted hover:border-primary"
-              >
-                <div className="flex items-start gap-4 md:gap-6">
-                  {/* Ícone */}
-                  <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-muted text-2xl md:text-3xl text-primary shrink-0 group-hover:bg-primary/10 transition-colors">
-                    {servico.icone}
-                  </div>
+            {servicos.map((servico, index) => {
+              const Icon = serviceIcons[index]
+              return (
+                <motion.article
+                  key={servico.titulo}
+                  variants={fadeUp}
+                  // whileHover={{ scale: 1.02, y: -4 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="p-6 md:p-8 rounded-2xl border border-border bg-background hover:bg-muted/50 hover:border-primary/30 transition-colors duration-300 cursor-pointer"
+                >
+                  <div className="flex items-start gap-4 md:gap-6">
+                    {/* Ícone */}
+                    <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-muted shrink-0">
+                      <Icon className="size-6 md:size-7 text-primary" aria-hidden="true" />
+                    </div>
 
-                  {/* Conteúdo */}
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold mb-2">
-                      {servico.titulo}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {servico.descricao}
-                    </p>
+                    {/* Conteúdo */}
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-bold mb-2">
+                        {servico.titulo}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {servico.descricao}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+                </motion.article>
+              )
+            })}
           </motion.div>
         </div>
       </div>

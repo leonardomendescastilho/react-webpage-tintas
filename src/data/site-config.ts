@@ -2,12 +2,12 @@
 
 export const siteConfig = {
   empresa: {
-    nome: "Webpage Tintas",
-    nomeCompleto: "Webpage Tintas Ltda",
+    nome: "Prana Pinturas",
+    nomeCompleto: "Prana Pinturas Ltda",
     anoFundacao: 2010,
-    telefone: "(11) 99999-9999",
-    email: "contato@webpagetintas.com.br",
-    cidade: "São José dos campos",
+    telefone: "(12) 99224-2771",
+    email: "pranapinturas@cores.com",
+    cidade: "São José dos Campos",
     estado: "SP",
     endereco: "Rua das Tintas, 123 - Vila Colorida",
     cep: "01234-567",
@@ -23,9 +23,9 @@ export const siteConfig = {
   },
 
   social: {
-    instagram: "https://instagram.com/webpagetintas",
-    facebook: "https://facebook.com/webpagetintas",
-    whatsapp: "https://wa.me/5511999999999",
+    instagram: "https://instagram.com/pranapinturas",
+    facebook: "https://facebook.com/pranapinturas",
+    whatsapp: "https://wa.me/5512992242771",
   },
 
   navegacao: [
@@ -151,7 +151,7 @@ export const siteConfig = {
 
   textos: {
     hero: {
-      badge: "◆ Excelência em Pintura desde 2010",
+      badge: "◆ Vida em cada ambiente",
       titulo: "Transformamos Ambientes em Obras de Arte",
       palavraDestaque: "Ambientes",
       subtitulo: "Especialistas em pintura residencial e comercial com mais de 15 anos de experiência. Qualidade premium, acabamento impecável e garantia de satisfação.",
@@ -168,7 +168,7 @@ export const siteConfig = {
       tag: "Serviços",
       titulo: "Soluções Completas",
       subtitulo: "Oferecemos uma gama completa de serviços de pintura para atender todas as suas necessidades.",
-      cta: "Fale sobre seu projeto →",
+      cta: "Fale sobre seu projeto",
     },
     processo: {
       tag: "Processo",
@@ -191,8 +191,8 @@ export const siteConfig = {
       subtitulo: "Entre em contato conosco e transforme seu ambiente.",
     },
     footer: {
-      tagline: "Transformando ambientes com excelência e dedicação há mais de 15 anos.",
-      copyright: `© ${new Date().getFullYear()} Webpage Tintas. Todos os direitos reservados.`,
+      tagline: "Vida em cada ambiente. Transformando espaços com excelência há mais de 15 anos.",
+      copyright: `© ${new Date().getFullYear()} Prana Pinturas. Todos os direitos reservados.`,
       links: [
         { label: "Política de Privacidade", href: "/privacidade" },
         { label: "Termos de Uso", href: "/termos" },

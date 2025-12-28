@@ -1,6 +1,6 @@
-# robots.txt para Webpage Tintas
+# robots.txt para Prana Pinturas
 User-agent: *
 Allow: /
 
-# Sitemap (altere para seu domínio quando publicar)
-Sitemap: https://seusite.com.br/sitemap.xml
+# Sitemap - atualizar com domínio real após deploy
+# Sitemap: https://seudominio.com.br/sitemap.xml

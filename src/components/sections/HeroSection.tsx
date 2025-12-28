@@ -32,7 +32,7 @@ export const HeroSection = ({ id = "inicio", className }: HeroSectionProps) => {
       id={id}
       aria-label="Seção principal"
       className={cn(
-        "relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden",
+        "relative min-h-screen flex items-center pt-20 pb-24 overflow-hidden",
         className
       )}
     >
@@ -121,7 +121,7 @@ export const HeroSection = ({ id = "inicio", className }: HeroSectionProps) => {
 
             {/* Card Flutuante - Avaliações */}
             <motion.div
-              className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 bg-background rounded-2xl p-4 shadow-lg border border-border"
+              className="absolute bottom-0 -left-6 md:bottom-30 md:-left-12 bg-background rounded-2xl p-4 shadow-lg border border-border"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
