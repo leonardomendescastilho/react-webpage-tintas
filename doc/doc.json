@@ -1,0 +1,631 @@
+{
+    "website": {
+      "nome_projeto": "Website Profissional - Pintor",
+      "total_secoes": 10,
+      "estrutura_geral": "Single Page Application com navegação por âncoras"
+    },
+  
+    "secoes": [
+      {
+        "id": "01_navegacao",
+        "nome": "Navegação (Header)",
+        "tipo": "Fixo no topo",
+        "estrutura": {
+          "layout": "Flexbox horizontal com 3 colunas",
+          "posicao": "Fixa no topo da página",
+          "efeito": "Background com blur ao rolar"
+        },
+        "elementos": {
+          "esquerda": {
+            "tipo": "Logo",
+            "componentes": ["Ícone/símbolo", "Nome da empresa"]
+          },
+          "centro": {
+            "tipo": "Menu de navegação",
+            "links": ["Início", "Portfólio", "Serviços", "Sobre", "Contato"]
+          },
+          "direita": {
+            "tipo": "CTA Principal",
+            "texto": "Orçamento Gratuito",
+            "formato": "Botão arredondado com seta"
+          }
+        },
+        "textos": {
+          "logo": "[NOME DA EMPRESA]",
+          "cta": "Orçamento Gratuito →"
+        }
+      },
+  
+      {
+        "id": "02_hero",
+        "nome": "Hero Section",
+        "tipo": "Seção principal de entrada",
+        "estrutura": {
+          "layout": "Grid 2 colunas (50/50)",
+          "altura": "100vh (tela cheia)",
+          "animacao": "Elementos surgem com fade-in e slide-up escalonado"
+        },
+        "elementos": {
+          "coluna_esquerda": {
+            "ordem": [
+              {
+                "tipo": "Badge/Tag",
+                "texto": "◆ Excelência em Pintura desde [ANO]"
+              },
+              {
+                "tipo": "Título Principal (H1)",
+                "texto": "Transformamos\nAmbientes em\nObras de Arte",
+                "destaque": "Ambientes (com gradiente)"
+              },
+              {
+                "tipo": "Subtítulo",
+                "texto": "Pintura residencial e comercial com acabamento premium.\nMais de [X] projetos entregues em [CIDADE]."
+              },
+              {
+                "tipo": "Botões CTA",
+                "primario": {
+                  "texto": "Solicitar Orçamento",
+                  "icone": "↗"
+                },
+                "secundario": {
+                  "texto": "Ver Trabalhos",
+                  "estilo": "Outline/borda"
+                }
+              }
+            ]
+          },
+          "coluna_direita": {
+            "tipo": "Visual/Imagem",
+            "componentes": [
+              {
+                "tipo": "Imagem principal",
+                "formato": "Retangular vertical (4:5)",
+                "bordas": "Arredondadas",
+                "conteudo": "Foto de ambiente pintado ou trabalho em execução"
+              },
+              {
+                "tipo": "Card flutuante 1",
+                "posicao": "Inferior esquerda (sobreposto)",
+                "conteudo": {
+                  "icone": "★",
+                  "numero": "[NOTA]",
+                  "texto": "+[X] avaliações"
+                }
+              },
+              {
+                "tipo": "Card flutuante 2",
+                "posicao": "Superior direita (sobreposto)",
+                "conteudo": {
+                  "numero": "[X]+",
+                  "texto": "Anos de experiência"
+                }
+              }
+            ]
+          },
+          "rodape_secao": {
+            "tipo": "Indicador de scroll",
+            "elementos": ["Linha horizontal", "Texto: Role para explorar"]
+          }
+        },
+        "textos": {
+          "badge": "◆ Excelência em Pintura desde [ANO]",
+          "titulo": "Transformamos Ambientes em Obras de Arte",
+          "subtitulo": "Pintura residencial e comercial com acabamento premium. Mais de [X] projetos entregues em [CIDADE].",
+          "cta_primario": "Solicitar Orçamento ↗",
+          "cta_secundario": "Ver Trabalhos",
+          "card_avaliacao": "[NOTA] - +[X] avaliações",
+          "card_experiencia": "[X]+ Anos de experiência",
+          "scroll": "Role para explorar"
+        }
+      },
+  
+      {
+        "id": "03_estatisticas",
+        "nome": "Seção de Estatísticas/Números",
+        "tipo": "Barra de credibilidade",
+        "estrutura": {
+          "layout": "Grid 4 colunas iguais",
+          "separacao": "Bordas superior e inferior + divisórias verticais entre itens"
+        },
+        "elementos": {
+          "formato_item": {
+            "numero": "Valor grande e destacado",
+            "label": "Descrição curta abaixo"
+          },
+          "itens": [
+            {
+              "numero": "[X]+",
+              "label": "Projetos Concluídos"
+            },
+            {
+              "numero": "[X]",
+              "label": "Anos de Experiência"
+            },
+            {
+              "numero": "[X]%",
+              "label": "Clientes Satisfeitos"
+            },
+            {
+              "numero": "0",
+              "label": "Projetos Abandonados"
+            }
+          ]
+        },
+        "textos": {
+          "stat_1": "[X]+ Projetos Concluídos",
+          "stat_2": "[X] Anos de Experiência",
+          "stat_3": "[X]% Clientes Satisfeitos",
+          "stat_4": "0 Projetos Abandonados"
+        }
+      },
+  
+      {
+        "id": "04_portfolio",
+        "nome": "Seção de Portfólio",
+        "tipo": "Galeria de trabalhos",
+        "estrutura": {
+          "layout": "Grid assimétrico (Bento Grid)",
+          "colunas": 3,
+          "linhas": 2,
+          "item_destaque": "Primeiro item ocupa 2 colunas e 2 linhas"
+        },
+        "elementos": {
+          "cabecalho": {
+            "tag": "Portfólio",
+            "titulo": "Trabalhos\nRecentes",
+            "subtitulo": "Uma seleção dos nossos projetos mais recentes, cada um com sua história e desafios únicos."
+          },
+          "formato_card": {
+            "imagem": "Foto do projeto (cover)",
+            "overlay_hover": {
+              "visibilidade": "Aparece no hover",
+              "elementos": [
+                {
+                  "tipo": "Tag",
+                  "conteudo": "Tipo do projeto (Residencial/Comercial)"
+                },
+                {
+                  "tipo": "Título",
+                  "conteudo": "Nome do projeto"
+                },
+                {
+                  "tipo": "Info",
+                  "conteudo": "Área em m²"
+                },
+                {
+                  "tipo": "Botão",
+                  "conteudo": "Seta circular ↗"
+                }
+              ]
+            }
+          },
+          "projetos_exemplo": [
+            {
+              "titulo": "[Nome do Projeto 1]",
+              "tipo": "Residencial",
+              "area": "[X]m²",
+              "destaque": true
+            },
+            {
+              "titulo": "[Nome do Projeto 2]",
+              "tipo": "Comercial",
+              "area": "[X]m²",
+              "destaque": false
+            },
+            {
+              "titulo": "[Nome do Projeto 3]",
+              "tipo": "Residencial",
+              "area": "[X]m²",
+              "destaque": false
+            },
+            {
+              "titulo": "[Nome do Projeto 4]",
+              "tipo": "Residencial",
+              "area": "[X]m²",
+              "destaque": false
+            }
+          ],
+          "rodape": {
+            "tipo": "Link",
+            "texto": "Ver todos os projetos →"
+          }
+        },
+        "textos": {
+          "tag": "Portfólio",
+          "titulo": "Trabalhos Recentes",
+          "subtitulo": "Uma seleção dos nossos projetos mais recentes, cada um com sua história e desafios únicos.",
+          "link_mais": "Ver todos os projetos →"
+        }
+      },
+  
+      {
+        "id": "05_servicos",
+        "nome": "Seção de Serviços",
+        "tipo": "Lista de serviços oferecidos",
+        "estrutura": {
+          "layout": "Grid 2 colunas (30/70)",
+          "coluna_esquerda": "Fixa (sticky)",
+          "coluna_direita": "Lista de cards empilhados"
+        },
+        "elementos": {
+          "coluna_esquerda": {
+            "tag": "Serviços",
+            "titulo": "Soluções\nCompletas",
+            "descricao": "Do planejamento à execução final, oferecemos um serviço completo e personalizado para cada projeto.",
+            "link": "Fale sobre seu projeto →"
+          },
+          "coluna_direita": {
+            "formato_card": {
+              "layout": "Horizontal (ícone + info + seta)",
+              "interacao": "Hover muda background e destaca borda",
+              "elementos": ["Ícone decorativo", "Título", "Descrição", "Seta →"]
+            },
+            "servicos": [
+              {
+                "icone": "◈",
+                "titulo": "Pintura Residencial",
+                "descricao": "Transformação completa de ambientes internos e externos com acabamento impecável."
+              },
+              {
+                "icone": "◇",
+                "titulo": "Pintura Comercial",
+                "descricao": "Soluções para escritórios, lojas e estabelecimentos com mínima interrupção."
+              },
+              {
+                "icone": "△",
+                "titulo": "Texturas Especiais",
+                "descricao": "Efeitos decorativos exclusivos: marmorizado, cimento queimado, grafiato."
+              },
+              {
+                "icone": "○",
+                "titulo": "Restauração",
+                "descricao": "Recuperação de superfícies danificadas e preparação profissional."
+              }
+            ]
+          }
+        },
+        "textos": {
+          "tag": "Serviços",
+          "titulo": "Soluções Completas",
+          "descricao": "Do planejamento à execução final, oferecemos um serviço completo e personalizado para cada projeto.",
+          "link": "Fale sobre seu projeto →",
+          "servico_1": {
+            "titulo": "Pintura Residencial",
+            "descricao": "Transformação completa de ambientes internos e externos com acabamento impecável."
+          },
+          "servico_2": {
+            "titulo": "Pintura Comercial",
+            "descricao": "Soluções para escritórios, lojas e estabelecimentos com mínima interrupção."
+          },
+          "servico_3": {
+            "titulo": "Texturas Especiais",
+            "descricao": "Efeitos decorativos exclusivos: marmorizado, cimento queimado, grafiato."
+          },
+          "servico_4": {
+            "titulo": "Restauração",
+            "descricao": "Recuperação de superfícies danificadas e preparação profissional."
+          }
+        }
+      },
+  
+      {
+        "id": "06_processo",
+        "nome": "Seção de Processo de Trabalho",
+        "tipo": "Timeline/Etapas",
+        "estrutura": {
+          "layout": "Grid 3 colunas x 2 linhas",
+          "total_etapas": 6
+        },
+        "elementos": {
+          "cabecalho": {
+            "tag": "Processo",
+            "titulo": "Como\nTrabalhamos"
+          },
+          "formato_card": {
+            "layout": "Vertical",
+            "elementos": ["Número da etapa (01-06)", "Título", "Descrição"]
+          },
+          "etapas": [
+            {
+              "numero": "01",
+              "titulo": "Visita Técnica",
+              "descricao": "Avaliação presencial do ambiente para entender suas necessidades e preferências."
+            },
+            {
+              "numero": "02",
+              "titulo": "Orçamento Detalhado",
+              "descricao": "Proposta transparente com todos os custos, materiais e prazo de execução."
+            },
+            {
+              "numero": "03",
+              "titulo": "Preparação",
+              "descricao": "Proteção de móveis, lixamento, correção de imperfeições e aplicação de primer."
+            },
+            {
+              "numero": "04",
+              "titulo": "Execução",
+              "descricao": "Aplicação das demãos necessárias com tintas de primeira linha e técnicas profissionais."
+            },
+            {
+              "numero": "05",
+              "titulo": "Acabamento",
+              "descricao": "Retoques finais, limpeza completa do ambiente e inspeção de qualidade."
+            },
+            {
+              "numero": "06",
+              "titulo": "Garantia",
+              "descricao": "Acompanhamento pós-obra e garantia de [X] anos no serviço executado."
+            }
+          ]
+        },
+        "textos": {
+          "tag": "Processo",
+          "titulo": "Como Trabalhamos",
+          "etapa_1": {
+            "titulo": "Visita Técnica",
+            "descricao": "Avaliação presencial do ambiente para entender suas necessidades e preferências."
+          },
+          "etapa_2": {
+            "titulo": "Orçamento Detalhado",
+            "descricao": "Proposta transparente com todos os custos, materiais e prazo de execução."
+          },
+          "etapa_3": {
+            "titulo": "Preparação",
+            "descricao": "Proteção de móveis, lixamento, correção de imperfeições e aplicação de primer."
+          },
+          "etapa_4": {
+            "titulo": "Execução",
+            "descricao": "Aplicação das demãos necessárias com tintas de primeira linha e técnicas profissionais."
+          },
+          "etapa_5": {
+            "titulo": "Acabamento",
+            "descricao": "Retoques finais, limpeza completa do ambiente e inspeção de qualidade."
+          },
+          "etapa_6": {
+            "titulo": "Garantia",
+            "descricao": "Acompanhamento pós-obra e garantia de [X] anos no serviço executado."
+          }
+        }
+      },
+  
+      {
+        "id": "07_depoimentos",
+        "nome": "Seção de Depoimentos",
+        "tipo": "Prova social",
+        "estrutura": {
+          "layout": "Grid 3 colunas iguais",
+          "background": "Diferenciado do resto da página"
+        },
+        "elementos": {
+          "cabecalho": {
+            "tag": "Depoimentos",
+            "titulo": "O que dizem\nnossos clientes"
+          },
+          "formato_card": {
+            "layout": "Vertical",
+            "elementos": [
+              "Aspas decorativas grandes",
+              "Texto do depoimento",
+              "Avatar (inicial do nome)",
+              "Nome do cliente",
+              "Profissão/cargo"
+            ]
+          },
+          "depoimentos": [
+            {
+              "texto": "Trabalho impecável. A atenção aos detalhes e o acabamento final superaram todas as expectativas. Indico para todos os meus projetos.",
+              "nome": "[Nome do Cliente 1]",
+              "profissao": "[Profissão]"
+            },
+            {
+              "texto": "Profissionalismo do início ao fim. Entregou no prazo, sem sujeira e com qualidade excepcional. Já é a terceira vez que contrato.",
+              "nome": "[Nome do Cliente 2]",
+              "profissao": "[Profissão]"
+            },
+            {
+              "texto": "Encontrar um pintor que entende de cores e acabamentos assim é raro. Parceria que pretendo manter por muitos anos.",
+              "nome": "[Nome do Cliente 3]",
+              "profissao": "[Profissão]"
+            }
+          ]
+        },
+        "textos": {
+          "tag": "Depoimentos",
+          "titulo": "O que dizem nossos clientes",
+          "depoimento_1": {
+            "texto": "Trabalho impecável. A atenção aos detalhes e o acabamento final superaram todas as expectativas. Indico para todos os meus projetos.",
+            "nome": "[Nome]",
+            "profissao": "[Profissão]"
+          },
+          "depoimento_2": {
+            "texto": "Profissionalismo do início ao fim. Entregou no prazo, sem sujeira e com qualidade excepcional. Já é a terceira vez que contrato.",
+            "nome": "[Nome]",
+            "profissao": "[Profissão]"
+          },
+          "depoimento_3": {
+            "texto": "Encontrar um pintor que entende de cores e acabamentos assim é raro. Parceria que pretendo manter por muitos anos.",
+            "nome": "[Nome]",
+            "profissao": "[Profissão]"
+          }
+        }
+      },
+  
+      {
+        "id": "08_cta_principal",
+        "nome": "Seção CTA (Call to Action)",
+        "tipo": "Conversão",
+        "estrutura": {
+          "layout": "Centralizado",
+          "largura": "Restrita (max 800px)",
+          "background": "Cor de destaque (diferente do resto)"
+        },
+        "elementos": {
+          "titulo": "Pronto para transformar\nseu ambiente?",
+          "subtitulo": "Solicite um orçamento gratuito e sem compromisso.\nRespondemos em até 24 horas.",
+          "botao": {
+            "texto": "Solicitar Orçamento Gratuito",
+            "icone": "↗"
+          }
+        },
+        "textos": {
+          "titulo": "Pronto para transformar seu ambiente?",
+          "subtitulo": "Solicite um orçamento gratuito e sem compromisso. Respondemos em até 24 horas.",
+          "botao": "Solicitar Orçamento Gratuito ↗"
+        }
+      },
+  
+      {
+        "id": "09_contato",
+        "nome": "Seção de Contato",
+        "tipo": "Formulário + Informações",
+        "estrutura": {
+          "layout": "Grid 2 colunas (50/50)",
+          "coluna_esquerda": "Informações de contato",
+          "coluna_direita": "Formulário"
+        },
+        "elementos": {
+          "coluna_esquerda": {
+            "tag": "Contato",
+            "titulo": "Vamos conversar\nsobre seu projeto",
+            "descricao": "Entre em contato para um orçamento personalizado.\nAtendemos toda a região metropolitana de [CIDADE].",
+            "informacoes": [
+              {
+                "icone": "◎",
+                "label": "Telefone / WhatsApp",
+                "valor": "[TELEFONE]"
+              },
+              {
+                "icone": "◉",
+                "label": "E-mail",
+                "valor": "[EMAIL]"
+              },
+              {
+                "icone": "◈",
+                "label": "Localização",
+                "valor": "[CIDADE, ESTADO]"
+              }
+            ],
+            "redes_sociais": ["Instagram", "Facebook", "WhatsApp"]
+          },
+          "coluna_direita": {
+            "tipo": "Formulário",
+            "campos": [
+              {
+                "tipo": "text",
+                "label": "Nome completo",
+                "placeholder": "Seu nome",
+                "largura": "100%"
+              },
+              {
+                "tipo": "email",
+                "label": "E-mail",
+                "placeholder": "seu@email.com",
+                "largura": "50%"
+              },
+              {
+                "tipo": "tel",
+                "label": "Telefone",
+                "placeholder": "(XX) XXXXX-XXXX",
+                "largura": "50%"
+              },
+              {
+                "tipo": "select",
+                "label": "Tipo de serviço",
+                "opcoes": [
+                  "Selecione uma opção",
+                  "Pintura Residencial",
+                  "Pintura Comercial",
+                  "Texturas Especiais",
+                  "Restauração"
+                ],
+                "largura": "100%"
+              },
+              {
+                "tipo": "textarea",
+                "label": "Mensagem",
+                "placeholder": "Conte-nos sobre seu projeto...",
+                "largura": "100%"
+              }
+            ],
+            "botao": {
+              "texto": "Enviar Mensagem",
+              "icone": "→"
+            }
+          }
+        },
+        "textos": {
+          "tag": "Contato",
+          "titulo": "Vamos conversar sobre seu projeto",
+          "descricao": "Entre em contato para um orçamento personalizado. Atendemos toda a região metropolitana de [CIDADE].",
+          "label_telefone": "Telefone / WhatsApp",
+          "label_email": "E-mail",
+          "label_localizacao": "Localização",
+          "form_nome": "Nome completo",
+          "form_email": "E-mail",
+          "form_telefone": "Telefone",
+          "form_servico": "Tipo de serviço",
+          "form_mensagem": "Mensagem",
+          "form_placeholder_nome": "Seu nome",
+          "form_placeholder_email": "seu@email.com",
+          "form_placeholder_telefone": "(XX) XXXXX-XXXX",
+          "form_placeholder_mensagem": "Conte-nos sobre seu projeto...",
+          "botao": "Enviar Mensagem →"
+        }
+      },
+  
+      {
+        "id": "10_footer",
+        "nome": "Rodapé (Footer)",
+        "tipo": "Encerramento",
+        "estrutura": {
+          "layout": "2 blocos verticais",
+          "bloco_superior": "Logo + Tagline",
+          "bloco_inferior": "Copyright + Links legais"
+        },
+        "elementos": {
+          "bloco_superior": {
+            "logo": "[NOME DA EMPRESA]",
+            "tagline": "Transformando ambientes com excelência\ne profissionalismo desde [ANO]."
+          },
+          "bloco_inferior": {
+            "copyright": "© [ANO] [Nome]. Todos os direitos reservados.",
+            "links": ["Política de Privacidade", "Termos de Uso"]
+          }
+        },
+        "textos": {
+          "logo": "[NOME DA EMPRESA]",
+          "tagline": "Transformando ambientes com excelência e profissionalismo desde [ANO].",
+          "copyright": "© [ANO] [Nome]. Todos os direitos reservados.",
+          "link_privacidade": "Política de Privacidade",
+          "link_termos": "Termos de Uso"
+        }
+      }
+    ],
+  
+    "variaveis_personalizar": {
+      "obrigatorias": [
+        "[NOME DA EMPRESA]",
+        "[ANO] - Ano de fundação",
+        "[CIDADE]",
+        "[TELEFONE]",
+        "[EMAIL]"
+      ],
+      "estatisticas": [
+        "[X] - Número de projetos",
+        "[X] - Anos de experiência",
+        "[X]% - Taxa de satisfação",
+        "[NOTA] - Nota de avaliação"
+      ],
+      "projetos": [
+        "Títulos dos projetos",
+        "Tipos (Residencial/Comercial)",
+        "Áreas em m²",
+        "Fotos dos projetos"
+      ],
+      "depoimentos": [
+        "Nomes dos clientes",
+        "Profissões",
+        "Textos dos depoimentos"
+      ]
+    }
+  }
