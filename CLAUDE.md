@@ -18,6 +18,7 @@ npm run preview  # Preview production build locally
 **Type:** Single Page Application (landing page) com navegacao por ancoras
 
 **UI Components:** shadcn/ui (new-york style) with Radix UI primitives
+
 - Add components via: `npx shadcn@latest add <component>`
 - Uses class-variance-authority (CVA) for variant management
 

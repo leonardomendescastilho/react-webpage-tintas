@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Header } from "@/layout/Header"
+import { Footer } from "@/layout/Footer"
 import { HeroSection } from "@/sections/HeroSection"
 import { StatsSection } from "@/sections/StatsSection"
 import { PortfolioSection } from "@/sections/PortfolioSection"
@@ -13,10 +14,10 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Webpage Tintas - Pintura Residencial e Comercial em São Paulo</title>
+        <title>Webpage Tintas - Pintura Residencial e Comercial em São José dos Campos</title>
         <meta
           name="description"
-          content="Especialistas em pintura residencial e comercial com mais de 15 anos de experiência em São Paulo. Qualidade premium, acabamento impecável e garantia de satisfação."
+          content="Especialistas em pintura residencial e comercial com mais de 15 anos de experiência no Vale do Paraíba. Qualidade premium, acabamento impecável e garantia de satisfação."
         />
       </Helmet>
 
@@ -32,6 +33,8 @@ const App = () => {
         <CTASection />
         <ContactSection />
       </main>
+
+      <Footer />
     </>
   )
 }

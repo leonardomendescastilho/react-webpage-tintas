@@ -1,62 +1,91 @@
 # git-helper
 
-Analisa mudanças Git e gera commits/PRs seguindo Conventional Commits.
+Analisa mudanças Git e gera branch, commit e PR seguindo Conventional Commits.
 
 ## Quando usar
 
 - Antes de fazer commit
 - Para criar Pull Requests
-- Para verificar estado do repositório
+- Para criar nova branch
 
 ## Instruções
 
-Ao executar esta skill:
+### Passo 1: Analise o estado atual do Git
 
-1. **Analise o estado atual do Git:**
-   - Execute `git status` para ver arquivos modificados
-   - Execute `git diff --stat` para resumo das mudanças
-   - Execute `git log --oneline -5` para commits recentes
+Execute os comandos:
+- `git status` para ver arquivos modificados
+- `git diff --stat` para resumo das mudanças
+- `git branch --show-current` para branch atual
+- `git log main..HEAD --oneline` para commits da branch atual
 
-2. **Gere sugestões baseadas nas convenções:**
+### Passo 2: Gere as 3 sugestões
 
-   **Tipos de commit:**
-   - `feat`: Nova funcionalidade
-   - `fix`: Correção de bug
-   - `docs`: Documentação
-   - `style`: Formatação (sem mudança de lógica)
-   - `refactor`: Refatoração de código
-   - `test`: Testes
-   - `chore`: Manutenção
-   - `perf`: Performance
+**Tipos (para branch e commit):**
+- `feat`: Nova funcionalidade
+- `fix`: Correção de bug
+- `docs`: Documentação
+- `style`: Formatação (sem mudança de lógica)
+- `refactor`: Refatoração de código
+- `test`: Testes
+- `chore`: Manutenção
+- `perf`: Performance
 
-   **Formato do commit:**
-   ```
-   <tipo>(<escopo>): <descrição curta>
-   ```
+### Passo 3: Apresente ao usuário
 
-3. **Apresente ao usuário:**
-   - Resumo das mudanças encontradas
-   - Sugestão de mensagem de commit
-   - Pergunte se deseja fazer o commit ou ajustar a mensagem
-
-4. **Se for criar PR:**
-   - Use o template com: Descrição, Tipo de Mudança, Como Testar, Checklist
-   - Analise todos os commits da branch para gerar descrição completa
-
-## Exemplo de uso
+SEMPRE apresente neste formato exato, com comandos prontos para copiar:
 
 ```
-/git-helper
+## 🌿 Branch
+
+git checkout -b <tipo>/<nome-descritivo>
+
+## 📝 Commit
+
+git add -A && git commit -m "<tipo>(<escopo>): <descrição>"
+
+## 📋 PR
+
+**Título:** <tipo>(<escopo>): <descrição>
+
+**Corpo:**
+## Descrição
+<breve descrição>
+
+## Mudanças
+- <mudança 1>
+- <mudança 2>
+
+## Como Testar
+1. <passo 1>
+2. <passo 2>
 ```
 
-Saída esperada:
+## Exemplo de saída
+
 ```
-📊 Estado do repositório:
-- 2 arquivos modificados
-- 1 arquivo novo
+## 🌿 Branch
 
-📝 Sugestão de commit:
-feat(sections): adiciona seções Portfolio e Services
+git checkout -b feat/user-authentication
 
-Deseja fazer o commit com esta mensagem?
+## 📝 Commit
+
+git add -A && git commit -m "feat(auth): adiciona sistema de login com validação"
+
+## 📋 PR
+
+**Título:** feat(auth): adiciona sistema de login
+
+**Corpo:**
+## Descrição
+Implementa autenticação de usuários com validação de credenciais.
+
+## Mudanças
+- Adiciona componente LoginForm
+- Adiciona validação de email e senha
+- Integra com API de autenticação
+
+## Como Testar
+1. Executar `npm run dev`
+2. Acessar /login
+3. Testar com credenciais válidas e inválidas
 ```

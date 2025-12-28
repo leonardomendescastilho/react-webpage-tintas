@@ -89,7 +89,7 @@ const PintorWebsite = () => {
             transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s'
           }}>
             Pintura residencial e comercial com acabamento premium.<br/>
-            Mais de 500 projetos entregues em São Paulo.
+            Mais de 500 projetos entregues no Vale do Paraíba.
           </p>
           
           <div style={{
@@ -339,7 +339,7 @@ const PintorWebsite = () => {
             </h2>
             <p style={styles.contactDesc}>
               Entre em contato para um orçamento personalizado.<br/>
-              Atendemos toda a região metropolitana de São Paulo.
+              Atendemos em todas cidades do Vale do Paraíba.
             </p>
             
             <div style={styles.contactInfo}>
@@ -361,7 +361,7 @@ const PintorWebsite = () => {
                 <div style={styles.contactItemIcon}>◈</div>
                 <div>
                   <div style={styles.contactItemLabel}>Localização</div>
-                  <div style={styles.contactItemValue}>São Paulo, SP</div>
+                  <div style={styles.contactItemValue}>São José dos Campos, SP</div>
                 </div>
               </div>
             </div>

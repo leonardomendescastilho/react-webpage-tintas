@@ -7,7 +7,7 @@ export const siteConfig = {
     anoFundacao: 2010,
     telefone: "(11) 99999-9999",
     email: "contato@webpagetintas.com.br",
-    cidade: "São Paulo",
+    cidade: "São José dos campos",
     estado: "SP",
     endereco: "Rua das Tintas, 123 - Vila Colorida",
     cep: "01234-567",
