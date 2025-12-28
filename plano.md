@@ -32,12 +32,12 @@ npx shadcn@latest add card
 2. [x] Header (Navegação)
 3. [x] HeroSection
 4. [x] StatsSection
-5. [ ] PortfolioSection
-6. [ ] ServicesSection
-7. [ ] ProcessSection
-8. [ ] TestimonialsSection
-9. [ ] CTASection
-10. [ ] ContactSection
+5. [x] PortfolioSection
+6. [x] ServicesSection
+7. [x] ProcessSection
+8. [x] TestimonialsSection
+9. [x] CTASection
+10. [x] ContactSection
 11. [ ] Footer
 
 ---
