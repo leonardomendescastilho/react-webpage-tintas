@@ -54,7 +54,7 @@ export const TestimonialsSection = ({ id = "depoimentos", className }: Testimoni
             >
               {/* Aspas decorativas */}
               <FaQuoteLeft
-                className="absolute top-6 right-6 size-8 text-primary/10"
+                className="absolute top-5 right-6 size-6 text-primary/10"
                 aria-hidden="true"
               />
 

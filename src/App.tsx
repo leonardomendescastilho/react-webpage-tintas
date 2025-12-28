@@ -14,10 +14,10 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Webpage Tintas - Pintura Residencial e Comercial em São José dos Campos</title>
+        <title>Prana Pinturas - Pintura Residencial e Comercial em São José dos Campos</title>
         <meta
           name="description"
-          content="Especialistas em pintura residencial e comercial com mais de 15 anos de experiência no Vale do Paraíba. Qualidade premium, acabamento impecável e garantia de satisfação."
+          content="Prana Pinturas - Vida em cada ambiente. Especialistas em pintura residencial e comercial com mais de 15 anos de experiência no Vale do Paraíba. Qualidade premium e garantia de satisfação."
         />
       </Helmet>
 

@@ -8,6 +8,16 @@ interface ProcessSectionProps {
   className?: string
 }
 
+// Cores de pintura para cada etapa do processo (aparecem no hover)
+const hoverGradientColors = [
+  "to-blue-300",      // 01 - Azul
+  "to-amber-300",     // 02 - Amarelo
+  "to-emerald-300",   // 03 - Verde
+  "to-rose-300",      // 04 - Vermelho
+  "to-slate-300",     // 05 - Cinza
+  "to-orange-300",    // 06 - Laranja
+]
+
 export const ProcessSection = ({ id = "processo", className }: ProcessSectionProps) => {
   const { textos, processo } = siteConfig
 
@@ -45,22 +55,30 @@ export const ProcessSection = ({ id = "processo", className }: ProcessSectionPro
           whileInView="visible"
           viewport={viewport}
         >
-          {processo.map((etapa) => (
+          {processo.map((etapa, index) => (
             <motion.article
               key={etapa.numero}
               variants={fadeUp}
-              className="group relative p-6 md:p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-colors"
+              className="group relative p-6 md:p-8 rounded-2xl bg-background border border-border  transition-colors overflow-hidden"
             >
+              {/* Overlay de cor no hover */}
+              <div
+                className={cn(
+                  "absolute inset-0 bg-linear-to-r from-transparent via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+                  hoverGradientColors[index]
+                )}
+              />
+
               {/* Número */}
-              <span className="inline-block text-5xl md:text-6xl font-bold text-muted-foreground/20 mb-4 group-hover:text-primary/20 transition-colors">
+              <span className="relative inline-block text-5xl md:text-6xl font-bold text-muted-foreground/20 mb-4 group-hover:text-primary/20 transition-colors">
                 {etapa.numero}
               </span>
 
               {/* Conteúdo */}
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+              <h3 className="relative text-xl md:text-2xl font-bold mb-2">
                 {etapa.titulo}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="relative text-muted-foreground leading-relaxed">
                 {etapa.descricao}
               </p>
             </motion.article>
