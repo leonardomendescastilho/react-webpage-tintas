@@ -6,14 +6,14 @@ import { defineConfig } from "vite"
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@/components": path.resolve(__dirname, "./src/components"),
-      "@/sections": path.resolve(__dirname, "./src/components/sections"),
-      "@/layout": path.resolve(__dirname, "./src/components/layout"),
-      "@/ui": path.resolve(__dirname, "./src/components/ui"),
-      "@/data": path.resolve(__dirname, "./src/data"),
-      "@/lib": path.resolve(__dirname, "./src/lib"),
-    },
+    alias: [
+      { find: "@/sections", replacement: path.resolve(__dirname, "./src/components/sections") },
+      { find: "@/layout", replacement: path.resolve(__dirname, "./src/components/layout") },
+      { find: "@/ui", replacement: path.resolve(__dirname, "./src/components/ui") },
+      { find: "@/components", replacement: path.resolve(__dirname, "./src/components") },
+      { find: "@/data", replacement: path.resolve(__dirname, "./src/data") },
+      { find: "@/lib", replacement: path.resolve(__dirname, "./src/lib") },
+      { find: "@", replacement: path.resolve(__dirname, "./src") },
+    ],
   },
 })

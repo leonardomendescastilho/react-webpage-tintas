@@ -1,23 +1,31 @@
-import { Helmet } from 'react-helmet-async'
-import { Button } from "@/components/ui/button"
+import { Helmet } from "react-helmet-async"
+import { Header } from "@/layout/Header"
+import { HeroSection } from "@/sections/HeroSection"
+import { StatsSection } from "@/sections/StatsSection"
 
-function App() {
+const App = () => {
   return (
     <>
       <Helmet>
-        <title>Webpage Tintas - Início</title>
-        <meta name="description" content="Bem-vindo à Webpage Tintas. Encontre as melhores tintas para sua casa." />
+        <title>Webpage Tintas - Pintura Residencial e Comercial em São Paulo</title>
+        <meta
+          name="description"
+          content="Especialistas em pintura residencial e comercial com mais de 15 anos de experiência em São Paulo. Qualidade premium, acabamento impecável e garantia de satisfação."
+        />
       </Helmet>
 
-      <div className="flex min-h-svh flex-col items-center justify-center gap-4 p-4">
-        <h1 className="text-4xl font-bold">Webpage Tintas</h1>
-        <p className="text-muted-foreground">Site para empresa de tintas</p>
-        <div className="flex gap-2">
-          <Button>Clique aqui</Button>
-          <Button variant="secondary">Secundário</Button>
-          <Button variant="outline">Outline</Button>
-        </div>
-      </div>
+      <Header />
+
+      <main id="main-content">
+        <HeroSection />
+        <StatsSection />
+
+        {/* Placeholder sections */}
+        <section id="portfolio" className="min-h-screen bg-muted/30" />
+        <section id="servicos" className="min-h-screen" />
+        <section id="processo" className="min-h-screen bg-muted/30" />
+        <section id="contato" className="min-h-screen" />
+      </main>
     </>
   )
 }

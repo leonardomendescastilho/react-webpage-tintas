@@ -29,9 +29,9 @@ npx shadcn@latest add card
 ## Ordem de Implementação
 
 1. [x] Estrutura base (App.tsx + site-config.ts)
-2. [ ] Header (Navegação)
-3. [ ] HeroSection
-4. [ ] StatsSection
+2. [x] Header (Navegação)
+3. [x] HeroSection
+4. [x] StatsSection
 5. [ ] PortfolioSection
 6. [ ] ServicesSection
 7. [ ] ProcessSection
