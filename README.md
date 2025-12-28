@@ -1,6 +1,6 @@
 # Webpage Tintas
 
-Website institucional para loja de tintas.
+Website institucional para loja de tintas - Landing Page SPA.
 
 ## Tech Stack
 
@@ -31,13 +31,33 @@ npm run preview
 
 ## Estrutura
 
-```
+```text
 src/
-├── components/ui/   # Componentes shadcn/ui
-├── lib/             # Utilitários
-├── assets/          # Arquivos estáticos
-├── App.tsx          # Componente raiz
-└── index.css        # Estilos globais e variáveis CSS
+├── components/
+│   ├── layout/          # Header, Footer
+│   ├── sections/        # Seções da landing page
+│   │   ├── HeroSection
+│   │   ├── StatsSection
+│   │   ├── PortfolioSection
+│   │   ├── ServicesSection
+│   │   ├── ProcessSection
+│   │   ├── TestimonialsSection
+│   │   ├── CTASection
+│   │   └── ContactSection
+│   └── ui/              # Componentes shadcn/ui
+├── data/                # Dados e configurações do site
+├── lib/                 # Utilitários
+├── App.tsx              # Componente raiz
+└── index.css            # Estilos globais
+```
+
+## Path Aliases
+
+```tsx
+import { Button } from "@/ui/button"
+import { HeroSection } from "@/sections/HeroSection"
+import { Header } from "@/layout/Header"
+import { siteConfig } from "@/data/site-config"
 ```
 
 ## Adicionar Componentes
