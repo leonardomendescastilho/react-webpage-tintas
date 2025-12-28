@@ -141,6 +141,12 @@ export const siteConfig = {
       area: "280m²",
       imagem: "/portfolio/cobertura-duplex.jpg",
     },
+    {
+      titulo: "Clínica Médica",
+      tipo: "Comercial",
+      area: "150m²",
+      imagem: "/portfolio/clinica-medica.jpg",
+    },
   ] as const,
 
   textos: {
