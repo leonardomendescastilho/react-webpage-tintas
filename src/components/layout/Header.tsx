@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { FaBars, FaXmark, FaPaintRoller } from "react-icons/fa6"
 import { Button } from "@/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
 import { siteConfig } from "@/data/site-config"
 import { cn } from "@/lib/utils"
 import { buttonAnimation } from "@/lib/motion"
@@ -91,19 +92,21 @@ export const Header = ({ className }: HeaderProps) => {
               </ul>
             </nav>
 
-            {/* CTA Button */}
-            <motion.div
-              className="hidden md:block"
-              whileHover={buttonAnimation.whileHover}
-              whileTap={buttonAnimation.whileTap}
-            >
-              <Button
-                onClick={() => handleNavClick("#contato")}
-                aria-label="Solicitar orçamento gratuito"
+            {/* CTA Button + Theme Toggle */}
+            <div className="hidden md:flex items-center gap-4">
+              <ModeToggle />
+              <motion.div
+                whileHover={buttonAnimation.whileHover}
+                whileTap={buttonAnimation.whileTap}
               >
-                Orçamento Gratuito →
-              </Button>
-            </motion.div>
+                <Button
+                  onClick={() => handleNavClick("#contato")}
+                  aria-label="Solicitar orçamento gratuito"
+                >
+                  Orçamento Gratuito →
+                </Button>
+              </motion.div>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -159,6 +162,9 @@ export const Header = ({ className }: HeaderProps) => {
                     >
                       Orçamento Gratuito →
                     </Button>
+                  </li>
+                  <li className="pt-2 flex justify-center" role="none">
+                    <ModeToggle />
                   </li>
                 </ul>
               </motion.nav>
